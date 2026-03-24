@@ -29,11 +29,13 @@ Add to `~/.claude.json`:
   "mcpServers": {
     "nexvigilant-station": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.nexvigilant.com/sse"]
+      "args": ["-y", "mcp-remote", "https://mcp.nexvigilant.com/mcp", "--transport", "streamable-http"]
     }
   }
 }
 ```
+
+> **Note:** Use `streamable-http` transport, not SSE. SSE is not supported on Cloud Run.
 
 ### HTTP REST (any framework)
 
